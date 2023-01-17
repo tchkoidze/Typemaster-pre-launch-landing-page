@@ -29,6 +29,15 @@ header {
   border-radius: 8px;
   background-color: #e8eff2;
 }
+
+.button1:hover,
+.button1:active {
+  background-color: #162542;
+  color: #ffffff;
+  transition: 0.75s;
+  cursor: pointer;
+}
+
 /* ****main */
 main {
   overflow-x: hidden;
@@ -66,6 +75,14 @@ h1 {
   color: #fff;
 }
 
+.button2:hover,
+.button2:active {
+  background-color: #ff9b62;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.75s;
+}
+
 .release {
   font-weight: 700;
 }
@@ -76,11 +93,15 @@ h1 {
 .img-keyboard-desktop {
   display: none;
 }
-.typemaster-keyboard-img-box img {
+
+.img-keyboard-mobile {
   max-width: 100%;
-  border-radius: 20px;
   margin: 64px 0 24px 24px;
   border-radius: 20px;
+}
+
+.square-box {
+  display: none;
 }
 
 .pictures {
@@ -90,30 +111,45 @@ h1 {
 }
 
 .first-img {
-  width: 129px;
-  height: 193px;
+  width: 34.4%;
+
   margin-left: -22px;
   background: #f16718;
   border-radius: 20px;
   overflow: hidden;
 }
-.first-img img {
+
+.first-img__tablet {
+  display: none;
+}
+.first-img__desktop {
+  display: none;
+}
+
+.first-img__mobile {
   display: block;
   width: 100%;
-
   mix-blend-mode: multiply;
   opacity: 0.75;
 }
 
 .second-img {
-  width: 220px;
-  height: 193px;
+  width: 58.7%;
+  /* height: 193px;*/
 }
-.second-img img {
+.second-img__mob {
+  display: block;
   width: 100%;
   border-radius: 10px;
 }
 
+.second-img__tab {
+  display: none;
+}
+
+.second-img__desk {
+  display: none;
+}
 h2 {
   font-weight: 900;
   font-size: 32px;
@@ -175,9 +211,14 @@ footer {
 /* tablet responsiv design*/
 
 @media (min-width: 768px) {
+  header {
+    padding: 40px 40px 62px 39px;
+  }
+
   .typemaster-keyboard-section {
     display: flex;
     align-items: center;
+    gap: 69px;
   }
 
   .img-keyboard-mobile {
@@ -187,14 +228,185 @@ footer {
     display: block;
   }
 
-  .typemaster-keyboard-img-box {
-    margin-left: 69px;
+  .typemaster-keybord-heading-box {
+    padding: 0;
+    min-width: 339px;
+    margin-left: 39px;
   }
-  .typemaster-keyboard-img-box img {
-    max-width: 478px;
-    margin: 0;
-  }
+
   .img-keyboard-tablet {
     max-width: 478px;
+    margin-right: -157px;
+    border-radius: 20px;
+  }
+  .pictures {
+    margin-top: 40px;
+    gap: 0;
+    justify-content: space-evenly;
+  }
+
+  .first-img {
+    width: 214px;
+    height: 320px;
+    margin: 0;
+  }
+
+  .first-img__mobile {
+    display: none;
+  }
+  .first-img__tablet {
+    display: block;
+    width: 100%;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+  }
+
+  .second-img {
+    width: 445px;
+    height: 320px;
+  }
+  .second-img__mob {
+    display: none;
+  }
+  .second-img__tab {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .vireless-keyboard-info {
+    display: flex;
+    gap: 36px;
+
+    padding: 0 40px 0 39px;
+  }
+  .section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
+    row-gap: 72px;
+    margin: 142px 0;
+    padding: 0 98px 0 39px;
+  }
+  .properties {
+    text-align: start;
+  }
+  h3 {
+    text-align: start;
+  }
+  .icon-box {
+    margin: 0;
+  }
+}
+
+/* desktop design */
+@media (min-width: 1440px) {
+  main {
+    margin: 0;
+  }
+  .typemaster-keyboard-section {
+    justify-content: space-between;
+    gap: 0;
+    background-image: url("./assets/shared/pattern-square.svg");
+    background-repeat: no-repeat;
+    background-position: right -120px top 0;
+    padding: 0 165px;
+  }
+  .typemaster-keybord-heading-box {
+    width: 40.1%;
+    margin: 0;
+  }
+  h1 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .heading-txt {
+    font-size: 18px;
+  }
+
+  .typemaster-keyboard-img-box {
+    width: 48.65%;
+  }
+  .img-keyboard-tablet {
+    display: none;
+  }
+  .img-keyboard-desktop {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .square-box {
+    display: block;
+  }
+
+  /* section 1*/
+
+  .section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 165px;
+    background-image: url("./assets/shared/pattern-square.svg");
+    background-repeat: no-repeat;
+    background-position: left -120px bottom 0;
+  }
+
+  .pictures {
+    justify-content: space-between;
+    width: 65.67%;
+    margin: 0;
+  }
+  /*first img*/
+  .first-img {
+    width: 34.93%;
+    height: 100%;
+  }
+  .first-img__tablet {
+    display: none;
+  }
+
+  .first-img__desktop {
+    display: block;
+    width: 100%;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+  }
+
+  /*second img*/
+  .second-img {
+    width: 60.96%;
+    height: 100%;
+  }
+  .second-img__tab {
+    display: none;
+  }
+  .second-img__desk {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .vireless-keyboard-info {
+    flex-direction: column;
+    padding: 0;
+    width: 22.97%;
+  }
+  .vireless-keyboard-info-txt,
+  h2 {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* section 2*/
+
+  .section2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 168px 165px 128px 165px;
+  }
+  footer {
+    margin-bottom: 39px;
   }
 }
